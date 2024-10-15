@@ -1,5 +1,6 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
+import generateMarkdown from './utils/generateMarkdown.js';
 
 const questions = [
   {
@@ -19,12 +20,12 @@ const questions = [
   },
   {
     type: 'input',
-    message: 'Usage',
+    message: 'npm init',
     name: 'usage',
   },
-  { 
+  {
     type: 'input',
-    message: 'Contributing',
+    message: 'Submitting a pull request',
     name: 'contributing',
   },
   {
@@ -36,33 +37,21 @@ const questions = [
     type: 'list',
     message: 'Choose a lisence',
     name: 'lisence',
-    choices: ['MIT', 'Apache', 'GNU', 'Mozilla']
+    choices: ['MIT', 'Apache', 'GNU', 'Mozilla'],
   },
 ];
 
-inquirer
-.prompt(questions)
-.then(answers => {
-  console.log('Answers', answers);
-});
+function init() {
+  inquirer.prompt(questions).then((response) => {
+    console.log(response);
+    const data = JSON.stringify(response, null, ' ');
+    const fileName = 'data.json';
+    fs.writeFile(fileName, data, (err) => {
+      if (err) throw err;
+      console.log('data written to json file');
+    });
+  });
+  generateMarkdown();
+}
 
-
-// const data = JSON.stringify('Answers', null, ' ');
-// console.log(data);
-
-
-// // // Create a function to write README file
-// fs.writeFile('./test.txt', data, (err) => {
-//   if (err) throw err;
-//   console.log('data written to file');
-//   });
-
-function writeToFile(fileName, data) {
-  
-};
-
-// Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
+init();
