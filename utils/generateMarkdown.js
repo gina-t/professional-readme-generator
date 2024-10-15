@@ -1,20 +1,31 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+import fs from 'fs';
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
-}
+function generateMarkdown(){
+  fs.readFile('data.json', 'utf8', (err, data) => {
+    if (err) {
+      console.log("Error reading the json file");
+    }else{
+      console.log(data);
+    };
+    const jsonData = JSON.parse(data);
+    const markdownContent = `
+    # ${jsonData.title} 
+    ## ${jsonData.description}
+    ## ${jsonData.installation}
+    ## ${jsonData.usage}
+    ## ${jsonData.contributing}
+    ## ${jsonData.testing}
+    ## ${jsonData.lisence}
+    `;
+    fs.writeFile('README.md', markdownContent, (err) => {
+      if (err) {
+        console.log("Error writing the markdown file");
+      }else{
+        console.log("Markdown file written");
+      };
+    });
+  });
+};
 
 export default generateMarkdown;
+
