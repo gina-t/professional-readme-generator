@@ -22,7 +22,13 @@ const questions = [
   {
     type: 'input',
     name: 'usage',
-    message: 'Usage instructiions npm init '.magenta,
+    message: 'Usage instructiions '.magenta,
+  },
+  {
+    type: 'list',
+    name: 'license',
+    message: 'Choose a license',
+    choices: ['MIT License', 'Apache License', 'GNU General Public License', 'Mozilla Public License'],
   },
   {
     type: 'input',
@@ -35,11 +41,20 @@ const questions = [
     message: 'Testing instructions '.magenta,
   },
   {
-    type: 'list',
-    name: 'lisence',
-    message: 'Choose a lisence',
-    choices: ['MIT License', 'Apache License', 'GNU General Public License', 'Mozilla Public License'],
+    type: 'input',
+    name: 'authors',
+    message: 'Authors and acknowledgment '.magenta,
   },
+  {
+    type: 'input',
+    name: 'email',
+    message: 'Enter your email address '.magenta,
+  },
+  {
+    type: 'input',
+    name: 'github',
+    message: 'Enter your GitHub username '.magenta,
+  }
 ];
 
 inquirer.prompt(questions)
