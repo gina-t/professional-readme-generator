@@ -27,12 +27,13 @@ Ensure package.json file contains
   "inquirer": "12.0.0"
 }
 
-Open integrated terminal
-In command-line
+Open integrated terminal and run the following sequential commands
+
     npm init -y
     npm install colors
     npm install inquirer
     node index.js
+    
 Respond to the series of questions in the integrated terminal.
 
 A userREADME.md will be created for you
