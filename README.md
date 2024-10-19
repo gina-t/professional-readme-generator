@@ -6,7 +6,8 @@ A command-line app that dynamically generates a professional README.md file from
 
 ## Installation
 
-Install node.js for your operating system.
+Install node.js for your operating system
+
 [node.js](https://nodejs.org/en/download/package-manager)
 
 ## Usage
