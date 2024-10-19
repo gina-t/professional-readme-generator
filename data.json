@@ -1,9 +1,13 @@
 {
-  "title": "sasha",
-  "description": "describe sashas life",
-  "installation": "give lots of love",
-  "usage": "lots of good food",
-  "contributing": "a bit of discipline",
-  "testing": "no chasing skateboards",
-  "lisence": "MIT License"
+  "title": "readme generator",
+  "description": "automated readme",
+  "installation": "use node",
+  "usage": "index.js",
+  "license": "MIT License",
+  "contributing": "clone a repo and make a pull request",
+  "testing": "test",
+  "authors": "tao",
+  "email": "ginadrcoder@gmail.com",
+  "github": "gina-t",
+  "questions": ""
 }

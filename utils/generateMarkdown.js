@@ -25,20 +25,41 @@ function renderLicenseSection(license) {
   };
 };
 
-function generateMarkdown(data){
+function generateMarkdown(){
   return fs.readFile('data.json', 'utf8')
   .then((data) => {
     const jsonData = JSON.parse(data);
     const markdownContent = `
-    # ${jsonData.title} 
-    ## ${jsonData.description}
-    ## ${jsonData.installation}
-    ## ${jsonData.usage}
-    ## ${jsonData.contributing}
-    ## ${jsonData.testing}
-    ## ${jsonData.lisence}
+    # Project title
+    ${jsonData.title} 
+    ## Table of Contents
+    - [Description](#description)
+    - [Installation](#installation)
+    - [Usage](#usage)
+    - [License](#license)
+    - [Contributing](#contributing)
+    - [Testing](#testing)
+    - [Authors and acknowledgment](#authors)
+    - [Questions](#questions)   
+    ## Description
+    ${jsonData.description}
+    ## Installation
+    ${jsonData.installation}
+    ## Usage
+    ${jsonData.usage}
+    ## License
+    ${jsonData.license}
+    ## Contributing
+    ${jsonData.contributing}
+    ## Testing
+    ${jsonData.testing}
+    ## Authors and acknowledgment
+    ${jsonData.authors}
+    ## Questions
+    - [Email]: (#email)
+    - [GitHub]: (#github)
     `;
-    return fs.writeFile('README.md', markdownContent)
+    return fs.writeFile('userREADME.md', markdownContent)
         .then(() => {
           console.log("Markdown file written");
         });
@@ -46,7 +67,7 @@ function generateMarkdown(data){
     .catch((err) => {
       console.error("Error reading or writing files", err);
     });
-}
+};
 
 export  { renderLicenseBadge, renderLicenseLink, renderLicenseSection, generateMarkdown };
 
