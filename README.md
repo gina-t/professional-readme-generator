@@ -2,21 +2,41 @@
 
 ## Description
 
-A command-line app that dynamically generates a professional README.md file from a user's input using node.js and the inquirer package.
+A command-line app that dynamically generates a professional README.md file from a user's input using node.js and inquirer package.
 
 ## Installation
 
-Install node.js
-
-Use the package manager npm to install inquirer
+Install node.js for your operating system.
+[node.js](https://nodejs.org/en/download/package-manager)
 
 ## Usage
 
-Clone repo to your IDE
-Open an integrated terminal
-In the command line run node index.js
-Respond to the questions
-A userREADME.md will be generated for you
+Copy SSH key of professional-readme-generator repo.
+
+In terminal for macOS, mkdir <name of directory> and git clone <paste SSH key>
+
+cd into directory
+
+code . to open vscode
+
+Ensure package.json file contains
+"type": "module"
+"dependancies": {
+  "colors": "1.4.0",
+  "inquirer": "12.0.0"
+}
+
+Open integrated terminal
+In command-line
+    npm init -y
+    npm install colors
+    npm install inquirer
+    node index.js
+Respond to the series of questions in the integrated terminal.
+
+A userREADME.md will be created for you
+
+Open userREADME.md in preview
 
 ## Contributing
 
