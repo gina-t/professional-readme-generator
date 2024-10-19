@@ -1,57 +1,68 @@
 import inquirer from 'inquirer';
-import fs from 'fs';
-import generateMarkdown from './utils/generateMarkdown.js';
+import colors from 'colors';
+import fs from 'fs/promises';
+import {renderLicenseBadge, renderLicenseLink, renderLicenseSection, generateMarkdown} from './utils/generateMarkdown.js';
 
 const questions = [
   {
     type: 'input',
-    message: 'Project title',
     name: 'title',
+    message: 'Enter project title '.magenta,
   },
   {
     type: 'input',
-    message: 'Project description',
     name: 'description',
+    message: 'Enter project description '.magenta,
   },
   {
     type: 'input',
-    message: 'Installation',
     name: 'installation',
+    message: 'Installation instructions '.magenta, 
   },
   {
     type: 'input',
-    message: 'npm init',
     name: 'usage',
+    message: 'Usage instructiions npm init '.magenta,
   },
   {
     type: 'input',
-    message: 'Submitting a pull request',
     name: 'contributing',
+    message: 'Submitting a pull request '.magenta,
   },
   {
     type: 'input',
-    message: 'Testing',
     name: 'testing',
+    message: 'Testing instructions '.magenta,
   },
   {
     type: 'list',
-    message: 'Choose a lisence',
     name: 'lisence',
-    choices: ['MIT', 'Apache', 'GNU', 'Mozilla'],
+    message: 'Choose a lisence',
+    choices: ['MIT License', 'Apache License', 'GNU General Public License', 'Mozilla Public License'],
   },
 ];
 
-function init() {
-  inquirer.prompt(questions).then((response) => {
-    console.log(response);
-    const data = JSON.stringify(response, null, ' ');
-    const fileName = 'data.json';
-    fs.writeFile(fileName, data, (err) => {
-      if (err) throw err;
-      console.log('data written to json file');
-    });
-  });
+inquirer.prompt(questions)
+  .then((data) => {
+    console.log(data);
+    const jsonData = JSON.stringify(data, null, 2);
+    // write file async/await version
+    const writeFile = async () => {
+      try {
+        await fs.writeFile('./data.json', jsonData);
+        console.log('File written to data.json');
+      } catch (err) {
+        console.error(err);
+      }
+    };
+  writeFile();   
+  // generate markdown content
+  renderLicenseBadge();
+  renderLicenseLink();
+  renderLicenseSection();
   generateMarkdown();
-}
+  });
 
-init();
+
+
+
