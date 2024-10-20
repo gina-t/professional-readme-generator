@@ -1,15 +1,5 @@
 # README.md generator
 
-## Table of Contents
-
-    -[Description](#description)
-    -[Installation](#installation)
-    -[Usage](#usage)
-    -[Contributing](#contributing)
-    -[Testing](#testing)
-    -[License](#license)
-    -[Acknowledgements](#acknowledgements)
-
 ## Description
 
 A command-line app that dynamically generates a professional README.md file from a user's input using node.js and inquirer package.
@@ -32,16 +22,16 @@ mkdir <name of directory>
 
 git clone <paste SSH key>
 
-cd into directory
+cd <name of directory>
 
 code . to open vscode
 
 Ensure package.json file contains
 
-"type": "module"
-"dependancies": {
-  "colors": "1.4.0",
-  "inquirer": "12.0.0"
+"type": "module",
+"dependencies": {
+  "colors": "^1.4.0",
+  "inquirer": "^12.0.0"
 }
 
 Open integrated terminal and run the following sequential commands
@@ -55,7 +45,7 @@ Respond to the series of questions in the integrated terminal.
 
 A userREADME.md will be created for you
 
-Open userREADME.md in preview
+```
 
 ## Contributing
 
