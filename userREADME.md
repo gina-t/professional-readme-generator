@@ -1,6 +1,6 @@
 
     # Project title
-    tao 
+    q 
     ## Table of Contents
     - [Description](#description)
     - [Installation](#installation)
@@ -11,19 +11,19 @@
     - [Authors and acknowledgment](#authors)
     - [Questions](#questions)   
     ## Description
-    jasmyn
+    q
     ## Installation
-    sasha
+    q
     ## Usage
-    onyx
+    q
     ## License
     MIT License
     ## Contributing
-    mini
+    q
     ## Testing
-    coco
+    q
     ## Authors and acknowledgement
-    cooper
+    q
     ## Questions
     - [Email](#email)
     - [GitHub](#github)

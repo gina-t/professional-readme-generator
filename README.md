@@ -18,11 +18,11 @@ In terminal for macOS, run:
 
 ```zsh
 
-mkdir <name of directory>
+mkdir <name-of-directory>
+
+cd <name-od-directory>
 
 git clone <paste SSH key>
-
-cd <name of directory>
 
 code . to open vscode
 
@@ -39,11 +39,11 @@ Open integrated terminal and run the following sequential commands
 
     npm init -y
     npm install inquirer colors
-    node index.js
+    node initApp.js
     
-Respond to the series of questions in the integrated terminal.
+Respond to the series of questions.
 
-A userREADME.md will be created for you
+A userREADME.md will be created.
 
 ```
 
