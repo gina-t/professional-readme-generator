@@ -30,32 +30,41 @@ function generateMarkdown(){
   .then((data) => {
     const jsonData = JSON.parse(data);
     const markdownContent = `
-    # Project title
-    ${jsonData.title} 
-    ## Table of Contents
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Testing](#testing)
-    - [Authors and acknowledgment](#authors)
-    - [Questions](#questions)   
+    # ${jsonData.title}
+    
     ## Description
+
     ${jsonData.description}
+
     ## Installation
+
     ${jsonData.installation}
+
     ## Usage
+
     ${jsonData.usage}
+
     ## License
+
     ${jsonData.license}
+    ${renderLicenseBadge(jsonData.license)}
+    ${renderLicenseLink(jsonData.license)}
+    ${renderLicenseSection(jsonData.license)}
+    
     ## Contributing
+
     ${jsonData.contributing}
+
     ## Testing
+
     ${jsonData.testing}
+
     ## Authors and acknowledgement
+
     ${jsonData.authors}
+
     ## Questions
+    
     - [Email](#email)
     - [GitHub](#github)
     `;

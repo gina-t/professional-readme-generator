@@ -12,7 +12,7 @@ Install node.js for your operating system
 
 ## Usage
 
-Copy SSH key of professional-readme-generator repo.
+Copy SSH key of professional-readme-generator repo to clipboard.
 
 In terminal for macOS, run:
 
@@ -20,26 +20,33 @@ In terminal for macOS, run:
 
 mkdir <name-of-directory>
 
-cd <name-od-directory>
+cd <name-of-directory>
 
 git clone <paste SSH key>
 
 code . to open vscode
 
+In explorer open professional-readme-generator in integrated terminal
+
+In command-line run:
+
+  npm init -y
+  npm install inquirer colors
+
 Ensure package.json file contains
 
 {
   "type": "module",
-  "dependencies": {
+  "dependencies": 
+  {
   "colors": "^1.4.0",
-  "inquirer": "^12.0.0"}
+  "inquirer": "^12.0.0"
+  }
 }
 
-Open integrated terminal and run the following sequential commands
+In command-line run:
 
-    npm init -y
-    npm install inquirer colors
-    node initApp.js
+  node initApp
     
 Respond to the series of questions.
 

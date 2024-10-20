@@ -44,7 +44,7 @@ const questions = [
   {
     type: 'input',
     name: 'authors',
-    message: 'Authors and acknowledgment '.magenta,
+    message: 'Authors and acknowledgement '.magenta,
   },
   {
     type: 'input',
