@@ -24,13 +24,20 @@ Install node.js for your operating system
 
 Copy SSH key of professional-readme-generator repo.
 
-In terminal for macOS, mkdir <name of directory> and git clone <paste SSH key>
+In terminal for macOS, run:
+
+```zsh
+
+mkdir <name of directory>
+
+git clone <paste SSH key>
 
 cd into directory
 
 code . to open vscode
 
 Ensure package.json file contains
+
 "type": "module"
 "dependancies": {
   "colors": "1.4.0",
