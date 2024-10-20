@@ -2,13 +2,13 @@
 
 ## Table of Contents
 
-    -[Description](#Description)
-    -[Installation](#Installation)
-    -[Usage](#Usage)
-    -[Contributing](#Contributing)
-    -[Testing](#Testing)
-    -[License](#License)
-    -[Acknowledgements](#Acknowledgements)
+    -[Description](#description)
+    -[Installation](#installation)
+    -[Usage](#usage)
+    -[Contributing](#contributing)
+    -[Testing](#testing)
+    -[License](#license)
+    -[Acknowledgements](#acknowledgements)
 
 ## Description
 
