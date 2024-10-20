@@ -15,15 +15,15 @@
     ## Installation
     sasha
     ## Usage
-    omyx
+    onyx
     ## License
     MIT License
     ## Contributing
     mini
     ## Testing
-    cooper
-    ## Authors and acknowledgment
     coco
+    ## Authors and acknowledgement
+    cooper
     ## Questions
     - [Email](#email)
     - [GitHub](#github)

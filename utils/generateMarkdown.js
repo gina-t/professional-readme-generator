@@ -53,7 +53,7 @@ function generateMarkdown(){
     ${jsonData.contributing}
     ## Testing
     ${jsonData.testing}
-    ## Authors and acknowledgment
+    ## Authors and acknowledgement
     ${jsonData.authors}
     ## Questions
     - [Email](#email)
