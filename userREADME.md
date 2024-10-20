@@ -1,30 +1,43 @@
 
-    # Project title
-    q 
-    ## Table of Contents
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Testing](#testing)
-    - [Authors and acknowledgment](#authors)
-    - [Questions](#questions)   
+    # 
+    This is the Way 
+    
     ## Description
-    q
+
+    A recipe finder for diabetic patients
+
     ## Installation
-    q
+
+    install node.js
+
     ## Usage
-    q
+
+    dropdown menu
+
     ## License
-    MIT License
+
+    Apache License
+    ![License](https://img.shields.io/badge/license-Apache License-blue.svg)
+    
+* [License](#license)
+
+    ## License
+    This project is licensed under the Apache License license.
+    
     ## Contributing
-    q
+
+    yes
+
     ## Testing
-    q
+
+    no
+
     ## Authors and acknowledgement
-    q
+
+    tao
+
     ## Questions
+    
     - [Email](#email)
     - [GitHub](#github)
     

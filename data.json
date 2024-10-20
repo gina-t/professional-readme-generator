@@ -1,12 +1,12 @@
 {
-  "title": "q",
-  "description": "q",
-  "installation": "q",
-  "usage": "q",
-  "license": "MIT License",
-  "contributing": "q",
-  "testing": "q",
-  "authors": "q",
-  "email": "q",
-  "github": "q"
+  "title": "This is the Way",
+  "description": "A recipe finder for diabetic patients",
+  "installation": "install node.js",
+  "usage": "dropdown menu",
+  "license": "Apache License",
+  "contributing": "yes",
+  "testing": "no",
+  "authors": "tao",
+  "email": "taoamstaff@gmail.com",
+  "github": "gina-t"
 }
