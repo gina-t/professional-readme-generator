@@ -28,17 +28,17 @@ code . to open vscode
 
 Ensure package.json file contains
 
-"type": "module",
-"dependencies": {
+{
+  "type": "module",
+  "dependencies": {
   "colors": "^1.4.0",
-  "inquirer": "^12.0.0"
+  "inquirer": "^12.0.0"}
 }
 
 Open integrated terminal and run the following sequential commands
 
     npm init -y
-    npm install colors
-    npm install inquirer
+    npm install inquirer colors
     node index.js
     
 Respond to the series of questions in the integrated terminal.
