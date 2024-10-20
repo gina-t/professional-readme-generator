@@ -1,6 +1,6 @@
 
     # Project title
-    readme generator 
+    tao 
     ## Table of Contents
     - [Description](#description)
     - [Installation](#installation)
@@ -11,20 +11,20 @@
     - [Authors and acknowledgment](#authors)
     - [Questions](#questions)   
     ## Description
-    automated readme
+    jasmyn
     ## Installation
-    use node
+    sasha
     ## Usage
-    index.js
+    omyx
     ## License
     MIT License
     ## Contributing
-    clone a repo and make a pull request
+    mini
     ## Testing
-    test
+    cooper
     ## Authors and acknowledgment
-    tao
+    coco
     ## Questions
-    - [Email]: (#email)
-    - [GitHub]: (#github)
+    - [Email](#email)
+    - [GitHub](#github)
     

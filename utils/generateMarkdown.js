@@ -56,8 +56,8 @@ function generateMarkdown(){
     ## Authors and acknowledgment
     ${jsonData.authors}
     ## Questions
-    - [Email]: (#email)
-    - [GitHub]: (#github)
+    - [Email](#email)
+    - [GitHub](#github)
     `;
     return fs.writeFile('userREADME.md', markdownContent)
         .then(() => {

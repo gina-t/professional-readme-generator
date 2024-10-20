@@ -1,13 +1,12 @@
 {
-  "title": "readme generator",
-  "description": "automated readme",
-  "installation": "use node",
-  "usage": "index.js",
+  "title": "tao",
+  "description": "jasmyn",
+  "installation": "sasha",
+  "usage": "omyx",
   "license": "MIT License",
-  "contributing": "clone a repo and make a pull request",
-  "testing": "test",
-  "authors": "tao",
+  "contributing": "mini",
+  "testing": "cooper",
+  "authors": "coco",
   "email": "ginadrcoder@gmail.com",
-  "github": "gina-t",
-  "questions": ""
+  "github": "gina-t"
 }

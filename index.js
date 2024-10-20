@@ -3,6 +3,7 @@ import colors from 'colors';
 import fs from 'fs/promises';
 import {renderLicenseBadge, renderLicenseLink, renderLicenseSection, generateMarkdown} from './utils/generateMarkdown.js';
 
+// array of questions for user input
 const questions = [
   {
     type: 'input',
@@ -57,10 +58,13 @@ const questions = [
   }
 ];
 
-inquirer.prompt(questions)
-  .then((data) => {
+// function to initialize app
+const initApp = async () => {
+  try {
+    const data = await inquirer.prompt(questions);
     console.log(data);
     const jsonData = JSON.stringify(data, null, 2);
+
     // write file async/await version
     const writeFile = async () => {
       try {
@@ -70,14 +74,17 @@ inquirer.prompt(questions)
         console.error(err);
       }
     };
-  writeFile();   
-  // generate markdown content
-  renderLicenseBadge();
-  renderLicenseLink();
-  renderLicenseSection();
-  generateMarkdown();
-  });
+    writeFile();   
+    // generate markdown content
+    renderLicenseBadge(data.license);
+    renderLicenseLink(data.license);
+    renderLicenseSection(data.license);
+    generateMarkdown(data);
+  } catch (err) {
+    console.error(err);
+  }
+};
 
-
+initApp();
 
 

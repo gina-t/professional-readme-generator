@@ -1,5 +1,15 @@
 # README.md generator
 
+## Table of Contents
+
+    -[Description](#Description)
+    -[Installation](#Installation)
+    -[Usage](#Usage)
+    -[Contributing](#Contributing)
+    -[Testing](#Testing)
+    -[License](#License)
+    -[Acknowledgements](#Acknowledgements)
+
 ## Description
 
 A command-line app that dynamically generates a professional README.md file from a user's input using node.js and inquirer package.
