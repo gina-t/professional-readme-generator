@@ -42,40 +42,41 @@ function generateMarkdown(){
   .then((data) => {
     const jsonData = JSON.parse(data);
     const markdownContent = `
-    # ${jsonData.title}
 
-    ## Table of Contents
-    ${renderTableOfContents()}
+# ${jsonData.title}
+
+## Table of Contents
+${renderTableOfContents()}
     
-    ## description
-    ${jsonData.description}
+## description
+${jsonData.description}
 
-    ## Installation
-    ${jsonData.installation}
+## Installation
+${jsonData.installation}
 
-    ## Usage
-    ${jsonData.usage}
+## Usage
+${jsonData.usage}
 
-    ## License
-    ${jsonData.license}
-    ${renderLicenseBadge(jsonData.license)}
-    ${renderLicenseLink(jsonData.license)}
-    ${renderLicenseSection(jsonData.license)}
+## License
+${jsonData.license}
+${renderLicenseBadge(jsonData.license)}
+${renderLicenseLink(jsonData.license)}
+${renderLicenseSection(jsonData.license)}
     
-    ## Contributing
-    ${jsonData.contributing}
+## Contributing
+${jsonData.contributing}
 
-    ## Testing
-    ${jsonData.testing}
+## Testing
+${jsonData.testing}
 
-    ## Authors and acknowledgement
-    ${jsonData.authors}
+## Authors and acknowledgement
+${jsonData.authors}
 
-    ## Questions
-    For enquiries, please contact me at:
-    - [Email](#email)
-    - [GitHub](#github)
-    `;
+## Questions
+For enquiries, please contact me at:
+   - [Email](#email)
+   - [GitHub](#github)
+`;
     
     return fs.writeFile('userREADME.md', markdownContent)
         .then(() => {

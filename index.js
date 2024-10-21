@@ -87,7 +87,7 @@ const initApp = async () => {
   }
 };
 
-export { initApp };
+initApp();
 
 
 
