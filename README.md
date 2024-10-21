@@ -46,7 +46,7 @@ Ensure package.json file contains
 
 In command-line run:
 
-  node initApp
+  node index.js
     
 Respond to the series of questions.
 
