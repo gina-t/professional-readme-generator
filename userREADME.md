@@ -1,43 +1,45 @@
 
-    # 
-    This is the Way 
-    
-    ## Description
+    # dog
 
-    A recipe finder for diabetic patients
+    ## Table of Contents
+    
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Testing](#testing)
+  - [Authors and acknowledgement](#authors-and-acknowledgement)
+    
+    ## description
+    dog
 
     ## Installation
-
-    install node.js
+    dog
 
     ## Usage
-
-    dropdown menu
+    dog
 
     ## License
-
-    Apache License
-    ![License](https://img.shields.io/badge/license-Apache License-blue.svg)
+    MIT License
+    ![License](https://img.shields.io/badge/license-MIT License-blue.svg)
     
 * [License](#license)
 
     ## License
-    This project is licensed under the Apache License license.
+    This project is licensed under the MIT License license.
     
     ## Contributing
-
-    yes
+    dog
 
     ## Testing
-
-    no
+    dog
 
     ## Authors and acknowledgement
-
-    tao
+    dog
 
     ## Questions
-    
+    For enquiries, please contact me at:
     - [Email](#email)
     - [GitHub](#github)
     

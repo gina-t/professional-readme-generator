@@ -1,5 +1,17 @@
 import fs from 'fs/promises';
 
+function renderTableOfContents(){
+  return `
+  - [Description](#description)
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Testing](#testing)
+  - [Authors and acknowledgement](#authors-and-acknowledgement)`
+};
+
+
 function renderLicenseBadge(license) {
   if (license !== "None") {
     return `![License](https://img.shields.io/badge/license-${license}-blue.svg)`;
@@ -31,43 +43,40 @@ function generateMarkdown(){
     const jsonData = JSON.parse(data);
     const markdownContent = `
     # ${jsonData.title}
-    
-    ## Description
 
+    ## Table of Contents
+    ${renderTableOfContents()}
+    
+    ## description
     ${jsonData.description}
 
     ## Installation
-
     ${jsonData.installation}
 
     ## Usage
-
     ${jsonData.usage}
 
     ## License
-
     ${jsonData.license}
     ${renderLicenseBadge(jsonData.license)}
     ${renderLicenseLink(jsonData.license)}
     ${renderLicenseSection(jsonData.license)}
     
     ## Contributing
-
     ${jsonData.contributing}
 
     ## Testing
-
     ${jsonData.testing}
 
     ## Authors and acknowledgement
-
     ${jsonData.authors}
 
     ## Questions
-    
+    For enquiries, please contact me at:
     - [Email](#email)
     - [GitHub](#github)
     `;
+    
     return fs.writeFile('userREADME.md', markdownContent)
         .then(() => {
           console.log("Markdown file written");
@@ -78,5 +87,5 @@ function generateMarkdown(){
     });
 };
 
-export  { renderLicenseBadge, renderLicenseLink, renderLicenseSection, generateMarkdown };
+export  { renderLicenseBadge, renderLicenseLink, renderLicenseSection, renderTableOfContents, generateMarkdown };
 

@@ -1,7 +1,7 @@
 import inquirer from 'inquirer';
 import colors from 'colors';
 import fs from 'fs/promises';
-import {renderLicenseBadge, renderLicenseLink, renderLicenseSection, generateMarkdown} from './utils/generateMarkdown.js';
+import {renderLicenseBadge, renderLicenseLink, renderLicenseSection, renderTableOfContents, generateMarkdown} from './utils/generateMarkdown.js';
 
 // array of questions for user input
 const questions = [
@@ -75,10 +75,12 @@ const initApp = async () => {
       }
     };
     writeFile();   
+    
     // generate markdown content
     renderLicenseBadge(data.license);
     renderLicenseLink(data.license);
     renderLicenseSection(data.license);
+    renderTableOfContents(data);
     generateMarkdown(data);
   } catch (err) {
     console.error(err);
